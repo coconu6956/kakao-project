@@ -1,0 +1,106 @@
+@charset "utf-8";
+/* CSS Document */
+/* Filter buttons */
+button, span {
+	padding: 3px 10px 4px 10px;
+	border-radius: 4px;
+	color: #333;
+	font-size: 100%;
+	cursor: pointer;
+	border:1px solid #ddd;
+	box-sizing: border-box;
+}
+
+.active {
+	background-color: #00cccc;
+	color: #fff;
+	cursor: pointer; border:none;}
+.ryan {background-color:rgba(218,164,54,1.00); color:#fff; border:none;}
+.apeach {background-color:rgba(249,156,157,1.00); color:#fff; border:none;}
+.freinds {background-color:rgba(249,156,157,1.00); color:#fff; border:none;}
+.littlefreinds {background-color:rgba(249,156,157,1.00); color:#fff; border:none;}
+
+.ryan:after{
+	content: "";
+	background:url("../images/b9606db6904008ad61d31dccd36ad4cc.gif");	
+}
+
+#container {
+	width:100%;
+	margin-top:100px;
+	font-family: NotoSansKR;
+	position: relative;
+}
+
+/*카테고리 상위 타이틀*/
+#container #content_banner {
+	width:100%;
+	height:300px;
+	background: url(../images/category_banner_1.jpg) 0 -70px no-repeat;
+	background-size:cover; 
+	position: relative;
+}
+#container #content_banner p {
+	color:#fff;
+	position:absolute;
+	left:80px;
+
+}
+
+#container #content_banner #category_text_eng {
+	position: absolute;
+	font-size: 3.5em;
+	top:50px;
+	animation: bounceInUp 2s ;
+}
+#container #content_banner #category_text_kor {
+	font-weight: bold;
+	font-size: 3em;
+	top:120px;
+	animation: bounceInUp 2.5s ;
+}
+.hide {display: none;}
+/* Gallery of images */
+#item_list {
+	text-align: center;
+	align-items: center;
+}
+
+/* Filter and search options */
+#buttons, #search {
+	text-align: center;
+	margin-bottom: 30px;}
+
+
+
+
+/* Search input */
+input {
+	font-size: 100%;
+	width:250px;
+	border: 1px solid #999;
+	padding: 5px;}
+input:hover {
+	border: 1px solid #666;}
+input:focus {
+	border: 1px solid #00cccc;
+	outline: none;}
+
+
+/* Gallery of images */
+
+.items {
+	width: 250px;
+	height: 300px;
+	border-radius: 3px;
+	align-items: center;
+	text-align: center;
+	border: 8px solid #fff;
+	margin: 6px;
+    -webkit-box-shadow: 0 0 3px 3px #ebebeb;
+    box-shadow: 0 0 3px 3px #ebebeb;
+	display: inline-block;
+	color:#000;
+}
+
+

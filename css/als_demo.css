@@ -1,0 +1,174 @@
+
+
+.esc {
+	position: relative;
+	clear: both;
+	width: 100%;
+}
+
+
+
+/********************************
+ * generic als elements styling
+ ********************************/
+.als-container {
+	position: relative;
+	width: 1300px;
+	margin: 0px auto;	
+}
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	width:1200px;
+	margin:0 auto 0 -30px;
+	
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;
+	z-index: 999;
+}
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+.als-item>a {
+	position: relative;
+	top:0;
+	left:0;
+}
+
+.als-item .popular_text {
+	position: absolute;
+	z-index: 999999;
+	top:0px;
+	left:0px;
+	width:250px;
+	height:250px;
+	background:rgba(25,25,25,0.7);
+	color:#fff;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	opacity: 0;
+	border-radius: 10px;
+	text-align: center;
+	
+}
+.als-item:hover .popular_text .popular_info{
+	transform: translateY(-33px);
+	opacity: 1;
+}
+.als-item .popular_text .popular_info {
+	text-align: right;
+	position: relative;
+	margin-top:20px;
+	margin-right:10px;
+	bottom: -30px;
+	opacity: 0;
+	transition: all 0.5s;
+}
+.als-item .popular_text .popular_info>span {
+	display: block;
+	margin-top:8px;
+	
+}
+
+.als-item .popular_text>img {
+	margin: 50px auto 10px auto;
+} 
+
+.als-item:hover .popular_text{
+	opacity: 1;
+}
+
+
+
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}
+
+
+/**************************
+ * specific als elements
+ * styling for #lista1
+ **************************/
+
+#lista1 {
+	margin: 60px auto 80px auto;
+}
+
+#lista1 .als-item {
+	margin: 0px 31px;
+	min-height: 152px;
+	min-width: 128px;
+}
+
+#lista1 .als-item .img {
+	position: relative;
+	z-index: 99;
+	display: block;
+	vertical-align: middle;
+	margin-bottom: 8px;
+	width: 250px;
+	height: 250px;
+	border-radius: 10px;
+}
+#lista1 .als-item .img>img {
+	border-radius: 10px;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+#lista1 .als-prev, #lista1 .als-next {
+	top: 108px;
+	width: 15px;
+	height: 22px;
+}
+
+
+#lista1 .als-prev {
+	left:-55px;
+	z-index: 99999;
+}
+
+#lista1 .als-next {
+	right:45px;
+	z-index: 99999;
+}
+
+
+
+.als-container_nav {
+	position:relative;
+	width:250px;
+	left:330px;
+	margin:0 auto;
+	float: left;
+}
+
+
+
+.als-prev_nav, .als-next_nav {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+	width: 15px;
+	height: 22px;
+	z-index:999999;
+}
+
+.als-prev_nav {
+		
+}
+
+.als-next_nav {
+	bottom:0px;
+}

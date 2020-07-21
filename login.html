@@ -2,46 +2,46 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">	
 <title>카카오프렌즈샵</title>
 <!--임시 로고-->
 <link rel="apple-touch-icon" href="images/icon.png">	
 <link rel="icon" href="images/icon.png">	
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/header_style.css">
 <link rel="stylesheet" href="css/login_style.css">
 <link href="css/aos.css" rel="stylesheet">	
+<link rel="stylesheet" href="css/media-query.css">
 </head>
 
 <body>
 	<div class="wrapper">
 		<!--헤더영역-->
 		<header id="navbar">
-			<div class="wrap_b" >
-				<a href="index.html"><div id="logo">
-				</div></a>
+			<div class="wrap_b pc_navi" >
+				<div id="logo"><a href="index.html"><img src="images/logo_bg_2.png" alt="logo"></a></div>
 				<nav id="top_nav">
 					<ul>
-						<li><a href="login.html"><img src="images/user.png" width="20"></a></li>
+						<li><a href="#"><img src="images/shopping-cart.png" width="20" alt="shopping-cart"></a></li>
+						<li><a href="login.html"><img src="images/user.png" width="20" alt="login"></a></li>
 					</ul>
 				</nav>
 				<nav id="main_nav">
 					<ul id="main_ul">
 						<li><a href="#">카테고리</a>
 							<ul class="submenu">
-								<li><a href="category.html">테마기획전</a></li>
-								<li><a href="category.html">인형/피규어</a></li>
-								<li><a href="category.html">의류</a></li>
-								<li><a href="category.html">쥬얼리</a></li>
-								<li><a href="category.html">문구</a></li>
-								<li><a href="category.html">여행/레져</a></li>
-								<li><a href="category.html">생활테크</a></li>
+								<li><a href="category2.html">인형/피규어</a></li>
+								<li><a href="category1.html">문구</a></li>
+								<li><a href="#">쥬얼리</a></li>
+								<li><a href="#">여행/레져</a></li>
+								<li><a href="#">생활테크</a></li>
 							</ul>
 						</li>
 						<li><a href="#">캐릭터</a>
 							<ul class="submenu">
-								<li><a href="#">카카오프렌즈</a></li>
-								<li><a href="#">니니즈</a></li>
+								<li><a href="#"><img src="images/logo.png" width="120" alt="카카오프렌즈"></a></li>
+								<li><a href="#"><img src="images/niniz_logo.png" alt="니니즈"></a></li>
 							</ul>
 						</li>
 						<li><a href="#">매장안내</a></li>
@@ -55,6 +55,53 @@
 					</ul>
 				</nav>
 			</div>	
+			<!--모바일 navi-->
+			<section id="mob_navi">
+				<a class="menu-trigger" href="#">
+   			 	 <span></span>
+   			 	 <span></span>
+  			 	 <span></span>
+				</a>
+				<div id="mob_logo"><a href="index.html"><img src="images/mob_logo.jpg" alt="logo"></a></div>
+				<a href="login.html" class="user"><img src="images/shopping-cart.png" width="25" alt="shopping-cart"></a>
+				<nav id="mob_menu">
+					<div><img id="mob_close" src="images/cancel.png" alt="close"></div>
+					<div id="mob_login">
+						<a href="login.html"><p>로그인 해주세요. :)</p><img src="images/sign-in.png" alt="login" width="30"></a>
+					</div>
+					<ul id="mob_top_nav">
+						<li><a href="#"><img src="images/shopping-cart.png" alt="shopping-cart"><p>장바구니</p></a></li>
+						<li><a href="#"><img src="images/delivery-truck.png" alt="delivery"> <p>주문/배송</p></a></li>
+						<li><a href="#"><img src="images/like.png" alt="like"><p>찜</p> </a></li>
+						<li><a href="#"><img src="images/user.png" alt="mypage" ><p>마이페이지</p></a></li>
+					</ul>
+					<ul id="mob_main_ul">
+						<li><a href="#">카테고리 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="category2.html">인형/피규어</a></li>
+								<li><a href="category1.html">문구</a></li>
+								<li><a href="#">쥬얼리</a></li>
+								<li><a href="#">여행/레져</a></li>
+								<li><a href="#">생활테크</a></li>
+							</ul>
+						</li>
+						<li><a href="#">캐릭터 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="#"><img src="images/kakao_menu.png" width="120" alt="카카오프렌즈"></a></li>
+								<li><a href="#"><img src="images/niniz_logo.png" alt="니니즈"></a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장안내 <img class="go" src="images/thin_right_arrow_333.png" alt="go" width="10px"></a></li>
+						<li><a href="#">고객센터 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="category.html">공지사항</a></li>
+								<li><a href="#">QnA</a></li>
+								<li><a href="#">Contact me</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
 		</header>
 		
 		<!--로그인폼-->
@@ -83,31 +130,41 @@
         </svg>
         <input type="text" placeholder="kakao@daum.net">
         <input type="password" placeholder="Password">
-		<input type="submit" value="Login" />	 
-		<input type="submit" value="Sign Up" />
-		<!--<a href="#">회원가입하세요^^</a>-->
+		<input type="submit" id="login" value="Login" />
+		<p><a href="#">회원가입하러 가기</a></p>	 
+		<!--<input type="submit" id="signUp" value="Sign Up" />-->
     </form>
-		
+		<section id="niniz_kakao">
+			<div class="center">
+				<div id="niniz"><a class="btn_friends" href="#">지금 만나러 가기</a></div>
+				<div id="kakao"><a class="btn_friends" href="#">지금 만나러 가기</a></div>
+			</div>
+		</section>
+		<div class="clear"></div>
 		<!--푸터영역-->
 		<footer id="footer">
 			<div class="wrap">
-				<div id="footer_logo"><img src="images/footer_logo.png"/></div>	
+				<div id="footer_logo"><img src="images/footer_logo.png" alt="logo"/></div>	
 				<ul id="footer_nav">
 					<li><a href="#">개인정보처리방치</a></li>
 					<li><a href="#">이용약관</a></li>
 				</ul>
 				<div id="footer_sns">
-					<a href="#"><img src="images/facebook.png" /></a>
-					<a href="#"><img src="images/twitter.png" /></a>
-					<a href="#"><img src="images/instagram.png" /></a>
-					<a href="#"><img src="images/youtube.png" /></a>
+					<a href="#"><img src="images/facebook.png" alt="facebook 페이스북"/></a>
+					<a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+					<a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+					<a href="#"><img src="images/youtube.png" alt="youtube"/></a>
 				</div>
-				<p class="footer_info">대표이사: 문채은</p>
-				<p class="footer_info">주소: 경기도 시흥시 신천동 </p>
-				<p class="footer_info">대표전화: 010-0000-0000</p>
-				<p class="footer_info">이메일: mhsuk0422@gmail.com</p>
-				<p class="footer_info">Copyright ⓒ moonChaeEun </p>
-				
+				<div class="clear"></div>
+				<p class="footer_info">주소: 서울특별시 강남구 테헤란로 521 파르나스타워, 27층 </p>
+				<p class="footer_info">대표전화: 1577-6263 / 평일 10시 ~ 18시</p>
+				<p class="footer_info">Copyright | '포트폴리오용으로 제작한 사이트입니다.'</p>
+				<div id="mob_footer_sns">
+					<a href="#"><img src="images/facebook.png" alt="facebook 페이스북"/></a>
+					<a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+					<a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+					<a href="#"><img src="images/youtube.png" alt="youtube"/></a>
+				</div>
 			</div>
 		</footer>
 	</div>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>카카오프렌즈샵</title>
+<!--임시 로고-->
+<link rel="apple-touch-icon" href="images/icon.png">	
+<link rel="icon" href="images/icon.png">	
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/header_style.css">
+<link rel="stylesheet" href="css/category_style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/media-query.css">	
+</head>
+
+<body>
+	<div class="wrapper">
+		<!--헤더영역-->
+		<header id="navbar">
+			<div class="wrap_b pc_navi" >
+				<div id="logo"><a href="index.html"><img src="images/logo_bg_2.png" alt="logo"></a></div>
+				<nav id="top_nav">
+					<ul>
+						<li><a href="#"><img src="images/shopping-cart.png" width="20" alt="shopping-cart"></a></li>
+						<li><a href="login.html"><img src="images/user.png" width="20" alt="login"></a></li>
+					</ul>
+				</nav>
+				<nav id="main_nav">
+					<ul id="main_ul">
+						<li><a href="#">카테고리</a>
+							<ul class="submenu">
+								<li><a href="category2.html">인형/피규어</a></li>
+								<li><a href="category1.html">문구</a></li>
+								<li><a href="#">쥬얼리</a></li>
+								<li><a href="#">여행/레져</a></li>
+								<li><a href="#">생활테크</a></li>
+							</ul>
+						</li>
+						<li><a href="#">캐릭터</a>
+							<ul class="submenu">
+								<li><a href="#"><img src="images/logo.png" width="120" alt="카카오프렌즈"></a></li>
+								<li><a href="#"><img src="images/niniz_logo.png" alt="니니즈"></a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장안내</a></li>
+						<li><a href="#">고객센터</a>
+							<ul class="submenu">
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">QnA</a></li>
+								<li><a href="#">Contact me</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!--모바일 navi-->
+			<section id="mob_navi">
+				<a class="menu-trigger" href="#">
+   			 	 <span></span>
+   			 	 <span></span>
+  			 	 <span></span>
+				</a>
+				<div id="mob_logo"><a href="index.html"><img src="images/mob_logo.jpg" alt="logo"></a></div>
+				<a href="login.html" class="user"><img src="images/shopping-cart.png" width="25" alt="shopping-cart"></a>
+				<nav id="mob_menu">
+					<div><img id="mob_close" src="images/cancel.png" alt="close"></div>
+					<div id="mob_login">
+						<a href="login.html"><p>로그인 해주세요. :)</p><img src="images/sign-in.png" alt="login" width="30"></a>
+					</div>
+					<ul id="mob_top_nav">
+						<li><a href="#"><img src="images/shopping-cart.png" alt="shopping-cart"><p>장바구니</p></a></li>
+						<li><a href="#"><img src="images/delivery-truck.png" alt="delivery"> <p>주문/배송</p></a></li>
+						<li><a href="#"><img src="images/like.png" alt="like"><p>찜</p> </a></li>
+						<li><a href="#"><img src="images/user.png" alt="mypage" ><p>마이페이지</p></a></li>
+					</ul>
+					<ul id="mob_main_ul">
+						<li><a href="#">카테고리 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="category2.html">인형/피규어</a></li>
+								<li><a href="category1.html">문구</a></li>
+								<li><a href="#">쥬얼리</a></li>
+								<li><a href="#">여행/레져</a></li>
+								<li><a href="#">생활테크</a></li>
+							</ul>
+						</li>
+						<li><a href="#">캐릭터 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="#"><img src="images/kakao_menu.png" width="120" alt="카카오프렌즈"></a></li>
+								<li><a href="#"><img src="images/niniz_logo.png" alt="니니즈"></a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장안내 <img class="go" src="images/thin_right_arrow_333.png" alt="go" width="10px"></a></li>
+						<li><a href="#">고객센터 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="category.html">공지사항</a></li>
+								<li><a href="#">QnA</a></li>
+								<li><a href="#">Contact me</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
+		</header>
+		
+		<section id="container">
+			<section id="content_banner">
+				<div class="wrap_b">
+					<p id="category_text_eng">Stationery</p>
+					<p id="category_text_kor">문구</p>
+				</div>
+			</section>
+			<section id="contents" class="wrap">
+				<article id="search" style="display: none;">
+					<input type="text" placeholder="찾고싶은 검색어를 입력해주세요" id="filter-search">
+				</article>
+				<article id="buttons"></article>
+				<article id="item_list">
+					<div class="items" data-tags="라이언/ryan" >
+						<a href="product.html">
+							<img src="images/items_1.jpg" alt="라이언 다이어리 ryan" width="250">
+							<p class="itemTitle">2019 다이어리_라이언</p>
+							<p class="itemprice">16,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="어피치/apeach" >
+						<a href="product.html">
+							<img src="images/items_2.jpg" alt="어피치 다이어리 apeach" width="250">
+							<p class="itemTitle">2019 다이어리_어피치</p>
+							<p class="itemprice">16,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="카카오프렌즈/freinds" >
+						<a href="#">
+							<img src="images/items_3.jpg" alt="카카오프렌즈 캘린더 freinds" width="250">
+							<p class="itemTitle">2019 탁상 캘린더</p>
+							<p class="itemprice">6,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="카카오프렌즈/freinds" >
+						<a href="#">
+							<img src="images/items_4.jpg" alt="카카오프렌즈 스케줄러 freinds" width="250">
+							<p class="itemTitle">2019 탁상 스케줄러</p>
+							<p class="itemprice">8,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="리틀프렌즈/littlefreinds" >
+						<a href="#">
+							<img src="images/items_5.jpg" alt="리틀프렌즈 크리스마스 젤펜 pen christmas littlefreinds" width="250">
+							<p class="itemTitle">크리스마스젤펜세트_리틀프렌즈</p>
+							<p class="itemprice">10,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="어피치/apeach" >
+						<a href="#">
+							<img src="images/items_6.jpg" alt="어피치 펜 pen apeach" width="250">
+							<p class="itemTitle">이모티콘 젤펜_복숭아어피치</p>
+							<p class="itemprice">3,500원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="라이언/ryan,리틀프렌즈/littlefreinds" >
+						<a href="#">
+							<img src="images/items_7.jpg" alt="라이언 리틀프렌즈 스티커 ryan littlefreinds" width="250">
+							<p class="itemTitle">귀염귀염스티커_리틀라이언</p>
+							<p class="itemprice">2,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="어피치/apeach,리틀프렌즈/littlefreinds" >
+						<a href="#">
+							<img src="images/items_8.jpg" alt="어피치 리틀프렌즈 스티커 apeach littlefreinds" width="250">
+							<p class="itemTitle">귀염귀염스티커_리틀어피치</p>
+							<p class="itemprice">2,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="라이언/ryan" >
+						<a href="#">
+							<img src="images/heykakao1.jpg" alt="라이언 스피커 ryan " width="250">
+							<p class="itemTitle">카카오미니C풀패키지</p>
+							<p class="itemprice">109,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="라이언/ryan" >
+						<a href="#">
+							<img src="images/heykakao2.jpg" alt="라이언 스피커 피규어 ryan " width="250">
+							<p class="itemTitle">카카오미니C+피규어</p>
+							<p class="itemprice">69,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="어피치/apeach,리틀프렌즈/littlefreinds" >
+						<a href="#">
+							<img src="images/items_9.jpg" alt="어피치 리틀프렌즈 케이스 apeach littlefreinds" width="250">
+							<p class="itemTitle">에어팟케이스_리본어피치</p>
+							<p class="itemprice">15,000원</p>
+						</a>
+					</div>
+					<div class="items" data-tags="라이언/ryan,리틀프렌즈/littlefreinds" >
+						<a href="#">
+							<img src="images/items_10.jpg" alt="라이언 리틀프렌즈 케이스 apeach littlefreinds" width="250">
+							<p class="itemTitle">에어팟케이스_리틀라이언</p>
+							<p class="itemprice">15,000원</p>
+						</a>
+					</div>
+				</article>
+			</section>
+		</section>
+		<section id="niniz_kakao">
+			<div class="center">
+				<div id="niniz"><a class="btn_friends" href="#">지금 만나러 가기</a></div>
+				<div id="kakao"><a class="btn_friends" href="#">지금 만나러 가기</a></div>
+			</div>
+		</section>
+		<div class="clear"></div>
+		<!--푸터영역-->
+		<footer id="footer">
+			<div class="wrap">
+				<div id="footer_logo"><img src="images/footer_logo.png" alt="logo"/></div>	
+				<ul id="footer_nav">
+					<li><a href="#">개인정보처리방치</a></li>
+					<li><a href="#">이용약관</a></li>
+				</ul>
+				<div id="footer_sns">
+					<a href="#"><img src="images/facebook.png" alt="facebook 페이스북"/></a>
+					<a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+					<a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+					<a href="#"><img src="images/youtube.png" alt="youtube"/></a>
+				</div>
+				<div class="clear"></div>
+				<p class="footer_info">주소: 서울특별시 강남구 테헤란로 521 파르나스타워, 27층 </p>
+				<p class="footer_info">대표전화: 1577-6263 / 평일 10시 ~ 18시</p>
+				<p class="footer_info">Copyright | '포트폴리오용으로 제작한 사이트입니다.'</p>
+				<div id="mob_footer_sns">
+					<a href="#"><img src="images/facebook.png" alt="facebook 페이스북"/></a>
+					<a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+					<a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+					<a href="#"><img src="images/youtube.png" alt="youtube"/></a>
+				</div>
+			</div>
+		</footer>
+		<!--top버튼-->
+		<div class="top"></div>
+	</div>	
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/nav_bar_scroll.js"></script><!--헤더스크롤효과-->
+	<script src="js/scroll_top_btn.js"></script><!--스크롤탑-->
+	<script src="js/item-filter.js"></script><!--스크롤탑-->
+	<script src="js/imagesFilter.js"></script><!--스크롤탑-->
+	<script> /*--캘린더 상품 호버시 이미지 변경--*/
+	$(function(){
+		$(".items img").hover(function() { 
+        var url = $(this).attr("src").match(/[^\.]+/) + "_over.jpg";
+        $(this).attr("src", url);
+    },function(){ var url = $(this).attr("src").replace("_over", "");
+        $(this).attr("src", url);}
+												 );
+	});	
+</script>
+	
+</body>
+</html>

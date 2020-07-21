@@ -2,10 +2,10 @@
 /* CSS Document */
 
 
-
-
+#navbar { position: relative;}
+#shipping {position: static; top:22px;}
 #container {
-	padding-top:100px;
+	padding-top:0px;
 }
 #container #item { 
 	width: 63%;
@@ -15,19 +15,24 @@
 
 #container #item #item_thumb { 
 	width:100%;
+	margin-bottom: 59px;
 }
 
 #item #item_thumb #item_thumb_bottom {
 	width:100%;
 	vertical-align: middle;
 	text-align: center;
+	margin-top: 20px;
 }
 
 #item_thumb #item_thumb_bottom>img {
 	width:130px;
 }
 
-#container #item #item_thumb>img { max-width:100%;}
+
+#container #item #item_thumb #item_thumb_top { width:630px; margin: 20px auto; }
+#container #item #item_thumb #item_thumb_top>img { max-width:100%; }
+#item #item_thumb .mob_item_info {display: none;}
 
 #container #item #item_detail_form { 
 	width:100%;
@@ -37,6 +42,10 @@
 #container #item #item_detail_form #navi {
 	background:#fff;
 	color: #333;
+	border-top: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
+	box-sizing: border-box;
+	z-index: 9999;
 }
 
 #container #item #item_detail_form nav .item_nav {
@@ -44,8 +53,10 @@
 	align-items: center;
 }
 #container #item #item_detail_form nav .item_nav li {
-	height: 50px;
-	line-height: 50px;
+	height: 60px;
+	line-height: 60px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #ddd;
 	flex:1;
 	-webkit-flex:1;
 	-ms-flex:1;
@@ -53,7 +64,6 @@
 	font-size:1.3em;
 	font-weight: bold;
 	text-align: center;
-	border-bottom:1px solid #ddd;
 }
                                                                 
 #container #item_shipping {
@@ -61,16 +71,24 @@
 	width:33%;
 	height: auto;
 	float: right;
+	margin-top:30px;
 	padding:10px;
 	padding-left: 20px;
 	font-size: 1.3em;
 	font-family: NotoSansKR; 
 	color: #333;
+	
 }
+#container #item_shipping #mob_shipping {display: none;}
 
-#container #item_shipping #item_info {
+
+#container #item #item_detail_form #item_notice {font-size:.9em;  letter-spacing: 1.5px; line-height: 1.4; margin-top:150px; margin-bottom: 100px; color:#505050;}
+#container #item #item_detail_form #item_notice h2 {font-size: 1.3em;}
+#container #item #item_detail_form #item_notice h3 {font-size: 1.1em; font-weight: bold; text-decoration: underline;margin-top:15px; margin-bottom: 5px;}
+
+#container #item_shipping .item_info {
 }
-#container #item_shipping #item_info #item_name { 
+#container #item_shipping  .item_name { 
 	margin-top:30px;
 	margin-bottom:20px;
 	font-weight: bold;
@@ -78,13 +96,15 @@
 }
 
 
-#container #item_shipping #item_order {}
+#container #item_shipping #item_order {
+	margin-top: 30px;
+}
 
-#container #item_shipping #item_order .total {
+#container #item_shipping  .total {
 	margin:30px 0;
 }
 
-#container #item_shipping #item_order #btn_bag {
+#container #item_shipping #item_order .btn_bag {
 	background:rgba(80,191,67,1.00);
 	width:150px;
 	border-radius: 5px;
@@ -93,7 +113,7 @@
 	font-weight:bold;
 	margin-right: 10px;
 }
-#container #item_shipping #item_order #btn_order {
+#container #item_shipping .btn_order {
 	width:150px;
 	border-radius: 5px;
 	font-size:0.9em;
@@ -103,26 +123,26 @@
 }
 
 
-#order_box { vertical-align:middle;  height: 50px; margin:50px auto;}
-#container #item_shipping #item_order button {  
+.order_box { vertical-align:middle;  height: 50px; margin:50px auto;}
+#container #item_shipping button {  
 	width:50px; 
 	height: 50px;
 	border: none;
 	background:none;
 	float: left;
 }
-#container #item_shipping #item_order button:active {
+#container #item_shipping  button:active {
 	border:none;
 }
 
-#container #item_shipping #item_order button>img{
+#container #item_shipping  button>img{
 	max-width: 100%;
 	margin:0;
 	padding: 0;
 }
-#container #item_shipping #item_order #btn_minus { }
+ .btn_minus { }
 
-#container #item_shipping #item_order #order_numder {
+  .order_numder {
 	margin-top:5px;
 	padding:0;
 	font-size: 28px;
@@ -144,9 +164,142 @@
 
 #container #item #item_detail_form #item_detail>img:first-child {margin-top: 10px;}
 
+
+
+
+/*니니즈 친구들 카카오 친구들*/
+#niniz_kakao {
+	position: relative;
+	margin-top:159px;
+	margin-bottom: 59px;
+	font-family: NotoSansKR;
+}
+
+#niniz_kakao #niniz {
+	float:left;
+	background:url("../images/niniz.jpg") 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	width:500px;
+	height: 220px;
+	margin-right: 20px;
+}
+#niniz_kakao #kakao {
+	float:left;
+	position: relative;
+	background:url("../images/kakao.jpg") 0 0 no-repeat;
+	background-size: cover;
+	width:500px;
+	height: 220px;
+	
+}
+
+.center {
+	width:1020px;
+	margin:0 auto;
+}
+
+#niniz_kakao .btn_friends {
+	position: absolute;
+	bottom: 25px;
+	left:20px;
+	display: block;
+	font-size:0.9em;
+	color:rgba(255,255,255,1);
+	border:1px solid #fff;
+	padding: 15px 15px;
+	border-radius: 10px;
+	background-color:rgba(255,255,255,0);
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+}
+#niniz_kakao #niniz>.btn_friends:hover {
+	background-color:rgba(255,255,255,1);
+	color:#55a1ef;
+}
+#niniz_kakao #kakao>.btn_friends:hover {
+	background-color:rgba(255,255,255,1);
+	color:#f69679;
+}
+
+#footer { margin-top:100px;}
+
 .sale { /*세일 텍스트 꾸미기*/
 	text-decoration: line-through;
 	color:#B4B4B4;
 	font-weight:normal;
 	font-size:0.8em;
+	margin-bottom: 5px;
+}
+
+.index {
+	border-bottom: 5px solid #ffda44 !important;
+	font-weight: bold;
+}
+.activeImg {
+	border: 1px solid #ffda44;
+	-webkit-box-shadow: 0 0 1.5px 1.5px #f8d348;
+	-moz-box-shadow: 0 0 1.5px 1.5px #f8d348;
+	-ms-box-shadow: 0 0 1.5px 1.5px  #f8d348;
+	-o-box-shadow: 0 0 1.5px 1.5px #f8d348;
+    box-shadow: 0 0 1.5px 1.5px #f8d348;
+	box-sizing: border-box;
+}
+
+.tab_title {
+	font-size: 1.8em;
+	font-weight: bold;
+	color:#000;
+	margin: 20px 0;
+}
+
+#item_question { position: relative; text-align: right;}
+#item_question>.tab_title {text-align: left;}
+#item_question .review_box { width: 98%; height: 230px; line-height: 200px; margin: 20px auto; border-top:1px solid #ddd; border-bottom:1px solid #ddd; background: none; font-size: .9em; color:#B4B4B4;
+	text-align: center;}
+
+
+#item_question .review_submit {
+	border:1px solid #ddd;
+	cursor: pointer;
+	color: rgb(80, 80, 80);;
+	padding: 3px 10px 4px 10px;
+	height: 23px;
+	line-height: 23px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+/*모바일 화면크기 0~768px 사이즈까지 적용 */
+@media screen and ( max-width:768px ) { 
+	#shipping {position: none;  }
+	#navbar { position: fixed; box-shadow: none; border-bottom: 1px solid #ddd;}
+	#container {padding-top:5%; margin-top: 45px;}
+	#container #item { width: 100%;float: none;}
+	#container #item #item_thumb { width:100%;margin-bottom: 59px;}
+	#container #item #item_thumb #item_thumb_top { width:90%; margin: 0 auto; }
+	#item #item_thumb #item_thumb_bottom {margin-top: 5%;}
+	#item #item_thumb .mob_item_info {margin-top: 5%; display: block; width: 100%; text-align: center;}
+	#item #item_thumb .mob_item_info>.item_name {margin-top:20px;margin-bottom:0px;font-weight: bold;font-size: 1.8em;}
+	.sales_price {font-size: 1em;font-weight: 700;}
+	#item_thumb #item_thumb_bottom>img {width:20%;}
+	
+	#container #item_shipping {position: fixed; width:100%;height: 51px;float: none;margin-top:0px;padding:0px;padding-left: 0px;font-size: 1.3em; bottom:-1px;left: 0;z-index: 99999; background: #fff; border-top:1px solid #ddd;}
+	#container #item_shipping #mob_shipping {display: block; position:relative; width:100%; height: 100%;}
+	#container #item_shipping #mob_item_order {width:100%; height: 100%;}
+	.btn_minus{}
+	#container #item_shipping .item_info {display: none;}
+	#container #item_shipping #item_order {margin-top: 0px; display: none;}
+	#container #item_shipping  .total {margin: 0; margin-left: 5%; line-height: 50px; float:left;font-size: 0.7em; width:20%;}
+	.order_box { vertical-align:none; width: 45%; height: 100%; float:left; margin:0; line-height: 50px;}
+	#container #item_shipping button {  width:26%; height: 100%; margin-top:1%; }
+      #container #item_shipping button:active {border:none;}
+	  #container #item_shipping button>img{max-width: 100%;  margin:0;padding: 0;}
+	.btn_bag {display: none;}
+	#container #item_shipping .btn_order {width:30%; height: 100%; border-radius: 0px;font-size:0.7em; font-weight:bold; float: right; margin: 0;}
+	#container #item_shipping  .order_numder {font-size: 0.85em; width: 30%;border-radius: 10px; margin-top: 5px;}
+	
+	#container #item #item_detail_form #navi{ width: 100%;}
+	#container #item #item_detail_form nav .item_nav li {height: 40px;line-height: 40px; font-size: 1em;}
+	#niniz_kakao {display: none;}
 }

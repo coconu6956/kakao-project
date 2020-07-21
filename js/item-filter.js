@@ -18,7 +18,7 @@ $(function() {
 			});
 		}
 	});
-	console.log(tagged);
+	//console.log(tagged);
 	
 	$('<span/>',{
 		text:"모두보기",

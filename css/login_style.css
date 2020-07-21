@@ -1,6 +1,4 @@
-body {
-  .background:url(../images/login_bg.png) no-repeat; 
-}
+
 
 form {
     width: 320px;
@@ -12,6 +10,7 @@ form {
 	border-radius: 10px;
 	
 }
+form>p {text-align: center; font-size: 0.85em; color:#271414; margin-top: 30px; text-decoration: underline;}
 
 svg {
     width: 70%;
@@ -19,6 +18,10 @@ svg {
     background: #fff;
     margin-bottom: 40px;
     align-self: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
 
@@ -33,71 +36,193 @@ input {
 
 @keyframes lookaway-up {
     from {
+          -webkit-transform: rotate3d(.2, 0, -.01, 20deg);
+             -moz-transform: rotate3d(.2, 0, -.01, 20deg);
+               -o-transform: rotate3d(.2, 0, -.01, 20deg);
+              -ms-transform: rotate3d(.2, 0, -.01, 20deg);
         transform: rotate3d(.2, 0, -.01, 20deg);
     }
 
     to {
+        -webkit-transform: rotate3d(.2, -.05, -.01, 20deg);
+        -moz-transform: rotate3d(.2, -.05, -.01, 20deg);
+        -o-transform: rotate3d(.2, -.05, -.01, 20deg);
+        -ms-transform: rotate3d(.2, -.05, -.01, 20deg);
         transform: rotate3d(.2, -.05, -.01, 20deg);
     }
 }
 
 @keyframes lookaway-down {
     0% {
+        -webkit-ransform: rotate3d(-.2, 0, -.01, 20deg);
+        -moz-ransform: rotate3d(-.2, 0, -.01, 20deg);
+        -o-ransform: rotate3d(-.2, 0, -.01, 20deg);
+        -ms-ransform: rotate3d(-.2, 0, -.01, 20deg);
         transform: rotate3d(-.2, 0, -.01, 20deg);
     }
 
     100% {
+        -webkit-transform: rotate3d(-.2, -.05, .01, 20deg);
+        -moz-transform: rotate3d(-.2, -.05, .01, 20deg);
+        -o-transform: rotate3d(-.2, -.05, .01, 20deg);
+        -ms-transform: rotate3d(-.2, -.05, .01, 20deg);
         transform: rotate3d(-.2, -.05, .01, 20deg);
     }
 }
 
 .ears {
+    -webkit-transform-origin: 50% 50% 5px;
+    -moz-transform-origin: 50% 50% 5px;
+    -o-transform-origin: 50% 50% 5px;
+    -ms-transform-origin: 50% 50% 5px;
     transform-origin: 50% 50% 5px;
 }
 
 .eyes {
+	-webkit-transform-origin: 50% 50% -40px;
+    -moz-transform-origin: 50% 50% -40px;
+    -o-transform-origin: 50% 50% -40px;
+    -ms-transform-origin: 50% 50% -40px;
     transform-origin: 50% 50% -40px;
 }
 
 .muzzle {
+	-webkit-transform-origin: 50% 50% -44px;
+    -moz-transform-origin: 50% 50% -44px;
+    -o-transform-origin: 50% 50% -44px;
+    -ms-transform-origin: 50% 50% -44px;
     transform-origin: 50% 50% -44px;
 }
 
 .ears, .eyes, .muzzle {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .focused {
+	-webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    -ms-transition: all 0.1s;
     transition: all 0.1s;
 }
 
 .look-away .ears,
 .look-away .eyes,
 .look-away .muzzle {
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    -ms-transition-duration: .3s;
     transition-duration: .3s;
+    -webkit-animation: 3s infinite alternate;
+    -moz-animation: 3s infinite alternate;
+    -o-animation: 3s infinite alternate;
+    -ms-animation: 3s infinite alternate;
     animation: 3s infinite alternate;
 }
 
 .look-away.up .ears,
 .look-away.up .eyes,
 .look-away.up .muzzle {
+    -webkit-transform: rotate3d(.2, 0, 0, 20deg) !important;
+    -moz-transform: rotate3d(.2, 0, 0, 20deg) !important;
+    -o-transform: rotate3d(.2, 0, 0, 20deg) !important;
+    -ms-transform: rotate3d(.2, 0, 0, 20deg) !important;
     transform: rotate3d(.2, 0, 0, 20deg) !important;
 }
 
 .look-away.down .ears,
 .look-away.down .eyes,
 .look-away.down .muzzle {
+    -webkit-transform: rotate3d(-.2, 0, 0, 20deg) !important;    
+    -moz-transform: rotate3d(-.2, 0, 0, 20deg) !important;    
+    -o-transform: rotate3d(-.2, 0, 0, 20deg) !important;    
+    -ms-transform: rotate3d(-.2, 0, 0, 20deg) !important;    
     transform: rotate3d(-.2, 0, 0, 20deg) !important;    
 }
 
 .look-away.playing.up .ears,
 .look-away.playing.up .eyes,
 .look-away.playing.up .muzzle {
+    -webkit-animation-name: lookaway-up;
+    -moz-animation-name: lookaway-up;
+    -o-animation-name: lookaway-up;
+    -ms-animation-name: lookaway-up;
     animation-name: lookaway-up;
 }
 
 .look-away.playing.down .ears,
 .look-away.playing.down .eyes,
 .look-away.playing.down .muzzle {
+    -webkit-animation-name: lookaway-down;
+    -moz-animation-name: lookaway-down;
+    -o-animation-name: lookaway-down;
+    -ms-animation-name: lookaway-down;
     animation-name: lookaway-down;
+}
+
+#login,#signUp {height:50px; background:#271414; color:#fff;}
+/*니니즈 친구들 카카오 친구들*/
+#niniz_kakao {
+	position: relative;
+	margin-top:100px;
+	margin-bottom: 0px;
+	font-family: NotoSansKR;
+}
+
+#niniz_kakao #niniz {
+	float:left;
+	background:url("../images/niniz.jpg") 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	width:500px;
+	height: 220px;
+	margin-right: 20px;
+}
+#niniz_kakao #kakao {
+	float:left;
+	position: relative;
+	background:url("../images/kakao.jpg") 0 0 no-repeat;
+	background-size: cover;
+	width:500px;
+	height: 220px;
+	
+}
+
+.center {
+	width:1020px;
+	margin:0 auto;
+}
+
+#niniz_kakao .btn_friends {
+	position: absolute;
+	bottom: 25px;
+	left:20px;
+	display: block;
+	font-size:0.9em;
+	color:rgba(255,255,255,1);
+	border:1px solid #fff;
+	padding: 15px 15px;
+	border-radius: 10px;
+	background-color:rgba(255,255,255,0);
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+}
+#niniz_kakao #niniz>.btn_friends:hover {
+	background-color:rgba(255,255,255,1);
+	color:#55a1ef;
+}
+#niniz_kakao #kakao>.btn_friends:hover {
+	background-color:rgba(255,255,255,1);
+	color:#f69679;
+}
+/*모바일 화면크기 0~768px 사이즈까지 적용 */
+@media screen and ( max-width:768px ) { 
+	#niniz_kakao {display: none;}
+	.center {width:100%;}
+	form {width: 320px; padding: 50px 25px 50px; margin: 100px auto 0px;}
 }

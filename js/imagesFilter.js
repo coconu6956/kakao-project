@@ -15,7 +15,7 @@ $(function(){ //즉시 실행되는 함
 			
 		});
 	});
-	console.log(cache);
+	//console.log(cache);
 	function imgFilter(){
 		var query = this.value.trim().toLocaleLowerCase();
 		cache.forEach(function(item){

@@ -1,9 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 /* Filter buttons */
-button, span {
-	padding: 3px 10px 4px 10px;
-	border-radius: 4px;
+ span {
+	/*padding: 3px 10px 4px 10px;*/
+	 text-align: center;
+	width:130px;
+	height: 40px;
+	 line-height: 40px;
+	 display: inline-block;
+	border-radius: 0px;
 	color: #333;
 	font-size: 100%;
 	cursor: pointer;
@@ -14,16 +19,13 @@ button, span {
 .active {
 	background-color: #00cccc;
 	color: #fff;
-	cursor: pointer; border:none;}
-.ryan {background-color:rgba(218,164,54,1.00); color:#fff; border:none;}
-.apeach {background-color:rgba(249,156,157,1.00); color:#fff; border:none;}
-.freinds {background-color:rgba(249,156,157,1.00); color:#fff; border:none;}
-.littlefreinds {background-color:rgba(249,156,157,1.00); color:#fff; border:none;}
+	cursor: pointer; border:1px solid #00cccc;}
+.ryan {background-color:#e0a243; color:#fff; border:1px solid #e0a243;}
+.apeach {background-color:#FFA7A9; color:#fff; border:1px solid #FFA7A9;;}
+.freinds {background-color:#f8d348; color:#fff; border:1px solid #f8d348;;}
+.littlefreinds {background-color:#1EDD01; color:#fff; border:1px solid #1EDD01;;}
 
-.ryan:after{
-	content: "";
-	background:url("../images/b9606db6904008ad61d31dccd36ad4cc.gif");	
-}
+
 
 #container {
 	width:100%;
@@ -35,10 +37,11 @@ button, span {
 /*카테고리 상위 타이틀*/
 #container #content_banner {
 	width:100%;
-	height:300px;
-	background: url(../images/category_banner_1.jpg) 0 -70px no-repeat;
+	height:400px;
+	background: url(../images/category_banner_1.jpg) center -70px no-repeat;
 	background-size:cover; 
 	position: relative;
+	overflow: hidden;
 }
 #container #content_banner p {
 	color:#fff;
@@ -49,26 +52,24 @@ button, span {
 
 #container #content_banner #category_text_eng {
 	position: absolute;
-	font-size: 3.5em;
-	top:50px;
-	animation: bounceInUp 2s ;
+	font-size: 2em;
+	top:100px;
+	/*animation: bounceInUp 2s ;*/
 }
 #container #content_banner #category_text_kor {
 	font-weight: bold;
-	font-size: 3em;
-	top:120px;
-	animation: bounceInUp 2.5s ;
+	font-size: 3.5em;
+	top:150px;
+	/*animation: bounceInUp 2.5s ;*/
 }
 .hide {display: none;}
 /* Gallery of images */
 #item_list {
-	text-align: center;
-	align-items: center;
 }
 
 /* Filter and search options */
 #buttons, #search {
-	text-align: center;
+	text-align: left;
 	margin-bottom: 30px;}
 
 
@@ -90,17 +91,109 @@ input:focus {
 /* Gallery of images */
 
 .items {
-	width: 250px;
-	height: 300px;
+	width: 270px;
+	height: 330px;
 	border-radius: 3px;
 	align-items: center;
-	text-align: center;
-	border: 8px solid #fff;
+	text-align: left;
+	border: 1px solid #ddd;
 	margin: 6px;
-    -webkit-box-shadow: 0 0 3px 3px #ebebeb;
-    box-shadow: 0 0 3px 3px #ebebeb;
+    
 	display: inline-block;
 	color:#000;
+	font-size: 1em;
+}
+.items>a>img {border-radius: 3px; margin:10px; width:250px;}
+
+.items .itemTitle {margin-top: 8px;}
+.items:hover { 
+	-webkit-box-shadow: 0 0 1.5px 1.5px #f8d348;
+	-moz-box-shadow: 0 0 1.5px 1.5px #f8d348;
+	-ms-box-shadow: 0 0 1.5px 1.5px  #f8d348;
+	-o-box-shadow: 0 0 1.5px 1.5px #f8d348;
+    box-shadow: 0 0 1.5px 1.5px #f8d348;
+	border: 1px solid #f8d348;}
+
+.items>a p {margin-left: 10px;}
+
+.itemprice {margin-top:5px;}
+
+/*니니즈 친구들 카카오 친구들*/
+#niniz_kakao {
+	position: relative;
+	margin-top:100px;
+	margin-bottom: 0px;
+	font-family: NotoSansKR;
 }
 
+#niniz_kakao #niniz {
+	float:left;
+	background:url("../images/niniz.jpg") 0 0 no-repeat;
+	background-size: cover;
+	position: relative;
+	width:500px;
+	height: 220px;
+	margin-right: 20px;
+}
+#niniz_kakao #kakao {
+	float:left;
+	position: relative;
+	background:url("../images/kakao.jpg") 0 0 no-repeat;
+	background-size: cover;
+	width:500px;
+	height: 220px;
+	
+}
+
+.center {
+	width:1020px;
+	margin:0 auto;
+}
+
+#niniz_kakao .btn_friends {
+	position: absolute;
+	bottom: 25px;
+	left:20px;
+	display: block;
+	font-size:0.9em;
+	color:rgba(255,255,255,1);
+	border:1px solid #fff;
+	padding: 15px 15px;
+	border-radius: 10px;
+	background-color:rgba(255,255,255,0);
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+}
+#niniz_kakao #niniz>.btn_friends:hover {
+	background-color:rgba(255,255,255,1);
+	color:#55a1ef;
+}
+#niniz_kakao #kakao>.btn_friends:hover {
+	background-color:rgba(255,255,255,1);
+	color:#f69679;
+}
+
+/*모바일 화면크기 0~683px 사이즈까지 적용 */
+@media screen and ( max-width: 768px ) { 
+
+	/*카테고리 상위 타이틀*/
+	#container #content_banner {height:300px; background: url(../images/mob_category_banner_1.jpg)  center no-repeat; background-size: cover;}
+    
+    #container {margin-top:45px;}
+	
+	#container #content_banner #category_text_eng {font-size: 1em; top:130px; left: 5%;font-weight: 300;text-shadow: 2px 2px 5px rgba(0,0,0,0.5);}
+	#container #content_banner #category_text_kor {font-weight: bold; font-size: 2.5em;top:150px; left: 5%;text-shadow: 2px 2px 5px rgba(0,0,0,0.5);}
+	
+	/* Filter buttons */
+ 	span {width:33%;height: 40px;line-height: 40px;font-size: 0.8em;}
+	/* Filter and search options */
+	#buttons, #search {  width: 90%; margin: 10% auto; }
+	/* Gallery of images */
+	#item_list {width: auto; margin: 0 auto; text-align: center;}
+	.items {width: 45%;height: 80%; border: 1px solid #ddd; margin:1%  ; font-size: 0.85em; padding-bottom:3% }
+	.items .itemTitle {margin-top: 5%; height: 25px;}
+	.itemprice {margin-top:5px;}
+	.items>a>img {border-radius: 3px; margin:5%; width:90%;}
+	#niniz_kakao {display: none;}
+}
 

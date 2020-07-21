@@ -1,59 +1,147 @@
 @charset "utf-8";
 /* CSS Document */
-
-
-
-
+.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span {background:rgba(255,184,6,1.00); }
+#mob_calender_items {display: none;}
+#popular {display: none;}
+#lista1 {display:block;}
 /*메인배너영역*/
 #main_banner {
 	width:100%;
-	height: 600px;
-	margin-top:100px;
-	overflow: hidden;	
+	min-width: 1200px;
+	height: 630px;
+	top:100px;
+	position: relative;
+	background: #fff;
+    color:#000;
+    margin: 0;
+    padding: 0;
+	margin-bottom: 59px;
+	overflow: hidden;
+}
+.swiper-scrollbar {display: none;}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  	text-align: center;
+  	position: relative;		
+  	/* Center slide text vertically */
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+  	display: flex;
+  	-webkit-box-pack: center;
+  	-moz-box-pack: center;
+  	-o-box-pack: center;
+  	-ms-flex-pack: center;
+  	-webkit-justify-content: center;
+  	-moz-justify-content: center;
+  	-o-justify-content: center;
+  	-ms-justify-content: center;
+  	justify-content: center;
+  	-webkit-box-align: center;
+  	-moz-box-align: center;
+  	-o-box-align: center;
+  	-ms-flex-align: center;
+  	-webkit-align-items: center;
+  	-moz-align-items: center;
+  	-o-align-items: center;
+  	-ms-align-items: center;
+  	align-items: center;
+  	overflow: hidden;
+	width:100%;
+	height: 100%;
 }
 
-#slide_1 {
-	widtht:100%;
-	height: 630px;
-	background-color:#cc3927;
-	position: relative;
-}
-#slide_1 #canv {
-	position: absolute;
-	top:0;
-	left:0;
-	z-index:999999999;
-}
+#main_banner>div img{  width:100%; }
+
+
 .banner_text {
 	position: absolute;
+	top:40%;
+	left:5%;
 	color:#fff;
-	top:25%;
-	left:50%;
-	font-size: 6em;
-	font-weight: bold;
-	transform: translate( -50%, -50%);
+	font-size: 1.4em;
 	z-index:99999;
-	font-family: Pacifico;
-	text-shadow: 15px 15px  10 #000;
+	font-family:  "NotoSansKR";
+	font-weight: 400;
+	margin-bottom: 15px;
+	display: block;
 }
 
-.slide_img {
+
+.btn_view {
+	width:150px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border:1.5px solid #fff;
+	color:#fff;
 	position: absolute;
-	top:45%;
-	left:50%;
-	z-index:999;
-	margin-top:100px;
-	transform: translate( -50%, -50%);
-	max-height: 540px;
+	bottom: 30%;
+	right: 20%;
+	cursor: pointer;
 }
+.btn_view:hover {text-decoration: underline;}
+
+.banner_title {
+	position: absolute;
+	font-family:  "NotoSansKR";
+	display: block;
+	bottom: 46%;
+	left: 5%;
+	font-size: 3em;
+	color:#fff;
+	font-weight: bold;
+	text-shadow: 10px 10px 0.5 #000;
+}
+
+.txt_box {
+	background:rgba(0,0,0,0.35); /*border-radius: 10px;*/
+	text-align: left;
+	/*padding:15px;*/
+	width:40%;
+	height: 100%;
+	position: absolute;
+	bottom:0%;
+	right: 0%;
+	vertical-align: middle;
+	transition:all .3s;
+}
+
+
+.hot,.new  {
+	position: relative;
+	width:70px;
+	height: 28px;
+	line-height: 28px;
+	display: inline-block;
+	color:#fff;
+	font-size: .8em;
+	font-weight: bold;
+	border-radius:15px;
+	text-align: center;
+	letter-spacing: 2px;
+	z-index:99999;
+	top:33%;
+	left: 5%;
+	margin-left: 5px;
+	font-family:  "NotoSansKR";
+}
+.hot {background:#EB3033;}
+.new {background:#4FD50C;}
+
+
 
 
 /*콜라보&sns영역*/
 #sns_collaboration {
-	margin: 59px auto 59px auto;
-	font-family: NotoSansKR;
-	overflow:hidden;
+	margin: 80px auto 80px auto;
+	font-family: "NotoSansKR";
 	display: block;
+	position: relative;
+	top:89px;
 }
 
 #sns_collaboration #collabo{
@@ -65,6 +153,7 @@
 	font-weight: bold;
 	font-family: Jua;
 }
+
 .title_box {
 	width:5px;
 	height:35px;
@@ -77,7 +166,7 @@
 	font-weight: lighter;
 	margin-left: 15px;
 	margin-top: 10px;
-	font-family: DXSnUB;
+	font-family: "DXSnUB", "NotoSansKR";;
 }
 #sns_collaboration #youtube {
 	float: right;
@@ -90,13 +179,17 @@
 
 .shadow {
 	width:195px;
-	height:161.38px;
+	height:195px;
 	background: rgba(11,11,11,0.3);
+	border-radius: 100px;
 	opacity: 0;
 	position: absolute;
-	top:0;
+	top:-25px;
 	left:0;
+	cursor: pointer;
+	transition: all 0.3s;
 }
+.shadow>img {margin: 42px 50px;  }
 .shadow:hover{
 	opacity: 1;
 }
@@ -105,18 +198,19 @@
 	width:195px;
 	float: left;
 	position: relative;
-	margin-top:100px;
+	margin-top:100px;	
 }
 
 /*카카오페이배너영역*/
 #kakako_pay_banner {
-	margin-top:59px;
-	margin-bottom: 59px;
+	top:89px;
+	margin-bottom: 80px;
 	position: relative;
 	width:1200px;
 	height: 129px;
 	background: url(../images/kakao_pay_banner.jpg) 0 0 no-repeat;
 	font-family: NotoSansKR;
+	clear: both;
 }
 
 #kakako_pay_banner .kakaopay_text {
@@ -140,11 +234,11 @@
 
 /*인기친구들영역*/
 #popular_rank {
-	top:59px;
+	top:89px;
 	margin-top:59px;
 	margin-bottom:59px;
 	position: relative;
-	font-family: NotoSansKR;
+	font-family: "NotoSansKR";
 }
 
 #popular_rank #popular_emotion {
@@ -159,7 +253,7 @@
 
 /*--거로로눈꽃나라의 라이언--*/
 #snow_world_ryan {
-	margin-top:59px;
+	top:109px;
 	margin-bottom: 59px;
 	font-family: NotoSansKR;
 	position: relative;
@@ -182,14 +276,15 @@
 	overflow: hidden;
 	transition:all 0.3s;
 	-webkit-transition:all 0.3s;
+	cursor: pointer;
 }
 #snow_world_ryan .left .main_snow_world>img {
 	transition:all 0.5s;
 	-webkit-transition:all 0.5s;
 	-moz-transition:all 0.5s;
 	-ms-transition:all 0.5s;
-	transform: scale(1.3);
 	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
 	max-width:150%;
 	max-height: 100%;
 	position: absolute;
@@ -200,10 +295,11 @@
 }
 
 #snow_world_ryan .left .main_snow_world:hover>img {
-	transform: scale(1.55);
+	
 	-webkit-transform: scale(1.55);
 	-moz-transform: scale(1.55);
 	-ms-transform: scale(1.55);
+	transform: scale(1.55);
 }
 
 #snow_world_ryan .left .main_snow_world .snow_text {
@@ -233,6 +329,7 @@
 	width: 240px;
 	height: 240px;
 	float: left;
+	cursor: pointer;
 }
 
 #snow_world_ryan  .right .sub_snow_world>img {
@@ -244,16 +341,17 @@
 } 
 
 #snow_world_ryan  .right .sub_snow_world:hover>img {
-	transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	-moz-transform: scale(1.15);
 	-ms-transform: scale(1.15);
+		transform: scale(1.15);
 }
 
 #snow_world_ryan  .right .sub_snow_world:nth-child(1), #snow_world_ryan  .right .sub_snow_world:nth-child(2){
 	margin-top:0;
 }
 
+.more {display: none; }
 
 
 .clear {
@@ -269,8 +367,8 @@
 /*달력배너영역*/
 
 #calendar {
-	margin-top:59px;
-	margin-bottom:59px;
+	margin-top:159px;
+	margin-bottom:159px;
 	position: relative;
 	display: block;
 	font-family: NotoSansKR;
@@ -287,8 +385,9 @@
 	margin-top: 59px;
 }
 
-#calendar #calender_items {}
+#calendar #calender_items {margin-top: 50px;}
 #calendar #calender_items .items { float:left; margin-right: 64px; margin-bottom: 30px; width:250px; }
+#calendar #calender_items .items:last-of-type::after { content: ''; display: block; margin-bottom: 100px; }
 #calendar #calender_items .items:nth-child(4n){margin-right: 0px;}
 #calendar #calender_items .items .items_img {
 	width:250px;
@@ -296,13 +395,14 @@
 	overflow: hidden;
 	border-radius: 10px;
 	position: relative;
+	border:1px solid #ddd;  
 }
 
-#calendar #calender_items .items .items_info {
+.items_info {
 	text-align: center;
-	margin-top:10px;
+	margin-top:15px;
 }
-#calendar #calender_items .items .items_info>span {
+.items_info>span {
 	display: block;
 	margin-top:10px;
 	font-size:1.1em;
@@ -313,9 +413,10 @@
 	max-height: 100%;
 }
 #calendar #calendar_title .cal_center {
-	width:1200px;
+    width: 100%;
+	max-width: 1200px;
 	height: 100%;
-	magin:0 auto;
+	margin: 0 auto;
 	position: relative;
 	
 }
@@ -340,7 +441,7 @@
 }
 
 .sub_calender_title {
-	font-family: DXSnUB;
+	font-family: "DXSnUB", "NotoSansKR";
 	color:#fff;
 	font-size: 1.3em;
 	font-weight: lighter;
@@ -351,14 +452,16 @@
 
 /*새로나온 친구들 헤이 카카오 영역*/
 #bg_banner {
-	background:url("../images/20181129_steady_Rbanner_W.jpg") no-repeat;
+	background:url("../images/20181129_steady_Rbanner_W.jpg") center center no-repeat;
+	background-attachment: fixed;
 	background-size: cover;
 	width:100%;
+	min-width: 1200px;
 	height: 600px;
 	position: relative;
 	display: block;
 	clear: both;
-	margin-top:59px;
+	margin-top:159px;
 	margin-bottom:59px;
 }
 #bg_banner #bg_content {
@@ -370,7 +473,22 @@
 	
 }
 
-#bg_banner #bg_content #bg_left {float:left;}
+#bg_banner #bg_content #bg_left {float:left; font-family: "NotoSansKR";}
+#bg_banner #bg_content #bg_left>p {font-weight: 300; font-size:20px; font-family: "DXSnUB", "NotoSansKR"; text-align: center; margin-top: -10px;}
+
+#bg_banner #bg_content #bg_left .al_item { width: 250px; float: left; margin: 20px; }
+#bg_banner #bg_content #bg_left .al_item:first-child {  margin-right: 0px;}
+#bg_banner #bg_content #bg_left .al_item:last-child { }
+#bg_banner #bg_content #bg_left .al_item>a>img { max-width: 100%; border: 1px solid #ddd; border-radius: 10px;}
+.ai_title { margin:30px; font-size: 35px; font-weight: 600; text-align: center; font-family: "DXSnUB", "NotoSansKR";}
+.ai_title::before {content: "[  "; }
+.ai_title::after {content: "  ]";  }
+.ai_title:after, .ai_title:before {
+  color: #16a085;
+  font-size: 42px;
+  line-height: 40px;
+}
+
 #bg_banner #bg_content #bg_right {
 	float: right;
 	margin-top:30px;
@@ -382,6 +500,7 @@
 	height: auto;
 	overflow: hidden;
 	position: relative;
+	cursor: pointer;
 }
 #bg_banner #bg_content #bg_right .bg_img #gy_bg {
 	width:100%;
@@ -389,6 +508,7 @@
 	background: rgba(0,0,0,0.5);
 	position: absolute;
 }
+
 /*헤이카카오 텍스트 영역*/
 .content {
   position: absolute;
@@ -396,18 +516,28 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height:170px;
+  font-family:  "NotoSansKR";
   overflow:hidden;
   z-index: 99999;
   font-size: 35px;
   line-height: 50px;
   color: #ecf0f1;
 }
+.content img {width:70px; display: block; opacity: 0; margin: 10px auto; text-align: center;
+	transition:all 0.5s;
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-ms-transition:all 0.5s;}
+
+.bg_img:hover .content img {opacity: 1; margin-top: 30px;}
+
 .content_container {
    font-weight: 600;
    overflow: hidden;
    height: 50px;
    padding: 0 40px;
 }
+
 
 .content_container:before {
     content: '[';
@@ -453,6 +583,17 @@
 	transform: translateY(-50px);
 }
 
+@keyframes txtUp {
+  50% {opacity:0;
+	   -webkit-transform: translateY(50px);
+       -moz-transform: translateY(50px);transform: translateY(50px);}
+  100%{opacity:1;
+	   -webkit-transform: translateY(0px);
+       -moz-transform: translateY(0px); 
+	  	   transform: translateY(50px);
+	}
+}
+
 @-webkit-keyframes opacity {
   0%, 100% {opacity:0;}
   50% {opacity:1;}
@@ -481,11 +622,11 @@
 
 #bg_banner #bg_content #bg_right .bg_img>img {max-width: 130%;}
 #bg_banner #bg_content #bg_right #bg_circle {
-	width:300px; position: absolute; top:280px; right: -150px;
+	width:300px; position: absolute; bottom:-30%; right: -30%;
 }
 
 
-#bg_banner #bg_content .divide {width:2px; height: 450px; background: rgba(17,12,10,1.00); float: left; margin-top:21px;}
+#bg_banner #bg_content .divide {width:2px; height: 440px; background: rgba(17,12,10,1.00); float: left; margin-top:21px;}
 
 
 .bg_color {
@@ -501,8 +642,8 @@
 /*니니즈 친구들 카카오 친구들*/
 #niniz_kakao {
 	position: relative;
-	margin-top:59px;
-	margin-bottom: 59px;
+	margin-top:100px;
+	margin-bottom: 0px;
 	font-family: NotoSansKR;
 }
 
@@ -555,4 +696,151 @@
 
 
 
+/*모달창*/
+.modal {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: none;
+	background:rgba(0,0,0,0.82);
+	z-index: 99999999999;
+	-webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+  	transition: .5s ease-in-out;
+}
+.modal .close { position: fixed; right:15%; display: block; width: 50px; height: 50px; background: url(../images/cancel.png) no-repeat; background-size: contain; cursor: pointer; top:30px;}
+.modal iframe { margin: auto; display: block; margin-top: 15vh; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+  	transition: .5s ease-in-out; }
 
+
+/*모바일 화면크기 0~768px 사이즈까지 적용 */
+@media screen and ( max-width: 768px ) { 
+	body {width: 100vw; overflow: none;}
+	.top {opacity: 0;}
+	.wrap { width: 95%; }
+	.wrap_b {width: 100%;}
+	
+    /* style.css */
+	#mob_calender_items {display:block;}
+	#calender_items {display:none;}
+	#lista1 {display: none;}
+	#main_banner {min-width:0px;height: 500px;top:0px;color:#000; margin-bottom: 59px;}
+	.swiper-scrollbar {display: block; z-index: 99999;}
+	.swiper-button-next, .swiper-button-prev,.swiper-pagination {display: none;}
+	.txt_box {text-align: left;width:100%; height: 100%;vertical-align: middle; background: rgba(0,0,0,0.25); z-index: 999;}
+	.btn_view {display: none;}
+	.banner_text {top:68%;left:5%;font-size: 1.1em; font-weight: 300;}
+	.banner_title {bottom: 20%;left: 5%;font-size: 2em; font-weight: 900;}
+	.hot,.new  {width:50px;height: 20px;line-height: 20px;font-size: 0.6em;font-weight: 300;top:61.5%;left: 5%; margin-left: 3px;}
+	#main_banner>div img{ height:100%; width: auto; }
+	.title_box {width:2px;height:20px;background:rgba(18,14,14,1.00);float: left;margin-right: 10px;}
+	.title {font-size:1.8em; font-weight: 800; /*font-family:  "jua","NotoSansKR";*/}
+	.sub_title {font-size: 1em;font-family:  "NotoSansKR";}
+	
+	#sns_collaboration {margin: 30px auto 30px auto; top:0px;}
+	#sns_collaboration #youtube {display: none;}
+	#sns_collaboration #collabo{float: none; width:100%; margin: 0 auto; text-align: center;}
+	.collabo_img {width:30%; float: left; position: relative; margin-top:20px; margin-left: 7px;	}
+	.shadow {width:100%;height:120%;background: rgba(11,11,11,0.3);border-radius: 50%; top:-10px;}
+	.shadow>img { margin: 25%;  width: 50px;}
+	.collabo_img>img {width:100%;}
+	#kakako_pay_banner {display: none;}
+	#popular_rank {top:30px; }
+	#popular_rank #popular_emotion {position: absolute;top:-40px; left:150px; width:100px;}
+	#popular {display: block; margin-top: 80px; width: 100%;}
+	#popular .items  {margin-bottom: 10px;}
+	#popular .items img  {border-radius: 10px;}
+	
+	/*#snow_world_ryan  .right .sub_snow_world>img,#snow_world_ryan  .right .sub_snow_world:hover>img {
+		transition:none;
+		-webkit-transition:none;
+		-moz-transition:none;
+		-ms-transition:none;
+	} */
+	
+	#snow_world_ryan {top:0%; margin-top: 50px; border-radius: 10px;}
+	#snow_world_ryan .left {float: none; width:100%;}
+	#snow_world_ryan .left .main_snow_world {width:100%;height:210px; border-radius: 10px;}
+	#snow_world_ryan .left .main_snow_world .snow_text {right:25px;top:12%;font-size:2em; font-weight: 900;}
+	#snow_world_ryan .left .main_snow_world>img {max-width:200%;  max-height: 200%; height: 150%; top:-45%;left:-10%; position: absolute;	}
+	#snow_world_ryan .right {float: none;width:100%;}
+	#snow_world_ryan  .right .sub_snow_world {margin-left: 0px; margin-right: 5%; margin-top:5%;width: 47.25%;height: 47.25%;}
+	#snow_world_ryan  .right .sub_snow_world:nth-of-type(2n) { margin-right: 0%;}
+	#snow_world_ryan  .right .sub_snow_world:nth-child(1), #snow_world_ryan  .right .sub_snow_world:nth-child(2){margin-top:5%;}
+	.more {width: 90%; border-radius: 10px; display: block; border: 2px solid #271414; color:#271414;font-weight: 500; font-size: 1.1em; text-align: center; height: 45px; line-height: 45px; margin-top: 10%; margin: 10% auto 0;}
+	.more a {width: 100%; height: 100%; display: block;}
+	    
+    .swiper-container2 {
+      width: 100%;
+      height: 100%;
+    }
+	 .swiper-slide2 {
+      text-align: center;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+   
+	#calendar {margin-top:-20px;margin-bottom:90px;width:100%;}
+	
+	#calendar #calendar_title {width:100%;min-width: 0px;height: 150px;margin-bottom: 0px;margin-top: 59px;}
+	#calendar #calendar_title .cal_center {width:100%;}
+	#calendar #calendar_title .cal_center>h3{font-size: 1.5em;font-weight: bold; top:25%;left:5%;}
+	.sub_calender_title {font-size: 1em;position: absolute;bottom:25%;left:5%;z-index: 9999;}
+	#calendar #calendar_title .cal_center>img {width: 82%;top:-50%;right: -10%;z-index: 99;}
+	#calendar #mob_calender_items {margin-top: 50px;}
+	#calendar  .items { float:left; margin: 0; width:auto; margin-bottom: 10px; }
+	#calendar  .items:last-of-type::after { content: ''; display: block; margin-bottom: 0px; }
+	#calendar  .items:nth-child(4n){margin-right: 0px;}
+	#calendar  .items .items_img {width:auto;height: auto; box-sizing: border-box;}
+
+	/*#calendar #calender_items .items {  margin: 0%; width:100%; margin-top: 30%; }
+	#calendar #calender_items .items .items_img {width:100%;height:100%; margin: 0;}
+	#calendar #calender_items .items .items_img>img {max-height: 100%; width:100%;margin: 0;}*/
+	
+	.items_info {text-align: center;margin-top:10%;width:100%;font-size: 0.9em;}
+	#calendar  .items::after { content: '';  margin-bottom: 0px; }
+	.owl-item {height: auto;}
+	
+	#bg_banner {background-attachment: none; background-size: cover;min-width: 0px; /*min-height: 650px;*/ height: auto;  margin-top:50px;margin-bottom:50px; padding-bottom: 5%; padding-top: 5%;}
+	#bg_banner #bg_content {height: auto; top:0;  padding: 1.5% 0;}
+	#bg_banner #bg_content #bg_left {float:none;}
+	#bg_banner #bg_content #bg_right {float: none; width: 100%; margin-right: 0px; margin-bottom: 5%; }
+	#bg_banner #bg_content #bg_right .bg_img {width:90%; margin:0 auto; }
+	
+	.ai_title { margin:0% 0 5%; font-size: 1.3em; font-weight: 600; }
+	.ai_title:after, .ai_title:before {font-size: 1.5em;line-height: 1.3em;}
+	#bg_banner #bg_content #bg_left>p {font-weight: 300; font-size:0.85em;margin-top: -10px;}
+	#bg_banner #bg_content #bg_left .al_item { width: 45%; float: left; margin:3.5% 3.5% 3.5% 0; }
+	#bg_banner #bg_content #bg_left .al_item:first-of-type {  margin-left: 3.5%; }
+	#bg_banner #bg_content #bg_left .al_item:last-of-type {  margin-right: 0%; }
+	#bg_banner #bg_content #bg_right #bg_circle {width:50%; bottom:-10%; right: -15%; }
+	#bg_banner #bg_content #bg_right .bg_img #gy_bg {height: 99.5%;}
+	.content {width: 60%; height:170px;font-size: 1.2em;line-height: 50px; text-align: center;}
+	
+	.bg_img:hover .content img { margin-top: 0px;}
+	.content_container {font-weight: 600; height: 50px;padding: 0 40px;}
+	.content_container:after, .content_container:before {font-size: 1.4em;line-height: 40px; }
+	.content_container_list_item {line-height:50px; width: 100%; text-align: center;}
+	.content img {width:50px; margin: 10px auto; opacity: 1;  }
+	.modal .close {width: 35px; height: 35px;right: 10px;}	
+	.modal iframe { width: 80%; height: 30%; vertical-align: middle; }
+	#niniz_kakao {display: none;}
+}

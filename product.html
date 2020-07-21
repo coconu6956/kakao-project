@@ -2,50 +2,98 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>카카오프렌즈샵</title>
 <!--임시 로고-->
 <link rel="apple-touch-icon" href="images/icon.png">	
 <link rel="icon" href="images/icon.png">	
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/header_style.css">
 <link rel="stylesheet" href="css/product_style.css">
+<link rel="stylesheet" href="css/als_demo.css">
+<link rel="stylesheet" href="css/media-query.css">	
 </head>
 
 <body>
 	<div class="wrapper">
 		<!--헤더영역-->
 		<header id="navbar">
-			<div class="wrap_b" >
-				<a href="index.html"><div id="logo">
-				</div></a>
+			<div class="wrap_b pc_navi" >
+				<div id="logo"><a href="index.html"><img src="images/logo_bg_2.png" alt="logo"></a></div>
 				<nav id="top_nav">
 					<ul>
-						<li><a href="login.html"><img src="images/user.png" width="20"></a></li>
+						<li><a href="#"><img src="images/shopping-cart.png" width="20" alt="shopping-cart"></a></li>
+						<li><a href="login.html"><img src="images/user.png" width="20" alt="login"></a></li>
 					</ul>
 				</nav>
 				<nav id="main_nav">
 					<ul id="main_ul">
 						<li><a href="#">카테고리</a>
 							<ul class="submenu">
-								<li><a href="category.html">테마기획전</a></li>
-								<li><a href="category.html">인형/피규어</a></li>
-								<li><a href="category.html">의류</a></li>
-								<li><a href="category.html">쥬얼리</a></li>
-								<li><a href="category.html">문구</a></li>
-								<li><a href="category.html">여행/레져</a></li>
-								<li><a href="category.html">생활테크</a></li>
+								<li><a href="category2.html">인형/피규어</a></li>
+								<li><a href="category1.html">문구</a></li>
+								<li><a href="#">쥬얼리</a></li>
+								<li><a href="#">여행/레져</a></li>
+								<li><a href="#">생활테크</a></li>
 							</ul>
 						</li>
 						<li><a href="#">캐릭터</a>
 							<ul class="submenu">
-								<li><a href="#">카카오프렌즈</a></li>
-								<li><a href="#">니니즈</a></li>
+								<li><a href="#"><img src="images/logo.png" width="120" alt="카카오프렌즈"></a></li>
+								<li><a href="#"><img src="images/niniz_logo.png" alt="니니즈"></a></li>
 							</ul>
 						</li>
 						<li><a href="#">매장안내</a></li>
 						<li><a href="#">고객센터</a>
 							<ul class="submenu">
+								<li><a href="#">공지사항</a></li>
+								<li><a href="#">QnA</a></li>
+								<li><a href="#">Contact me</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<!--모바일 navi-->
+			<section id="mob_navi">
+				<a class="menu-trigger" href="#">
+   			 	 <span></span>
+   			 	 <span></span>
+  			 	 <span></span>
+				</a>
+				<div id="mob_logo"><a href="index.html"><img src="images/mob_logo.jpg" alt="logo"></a></div>
+				<a href="login.html" class="user"><img src="images/shopping-cart.png" width="25" alt="shopping-cart"></a>
+				<nav id="mob_menu">
+					<div><img id="mob_close" src="images/cancel.png" alt="close"></div>
+					<div id="mob_login">
+						<a href="login.html"><p>로그인 해주세요. :)</p><img src="images/sign-in.png" alt="login" width="30"></a>
+					</div>
+					<ul id="mob_top_nav">
+						<li><a href="#"><img src="images/shopping-cart.png" alt="shopping-cart"><p>장바구니</p></a></li>
+						<li><a href="#"><img src="images/delivery-truck.png" alt="delivery"> <p>주문/배송</p></a></li>
+						<li><a href="#"><img src="images/like.png" alt="like"><p>찜</p> </a></li>
+						<li><a href="#"><img src="images/user.png" alt="mypage" ><p>마이페이지</p></a></li>
+					</ul>
+					<ul id="mob_main_ul">
+						<li><a href="#">카테고리 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="category2.html">인형/피규어</a></li>
+								<li><a href="category1.html">문구</a></li>
+								<li><a href="#">쥬얼리</a></li>
+								<li><a href="#">여행/레져</a></li>
+								<li><a href="#">생활테크</a></li>
+							</ul>
+						</li>
+						<li><a href="#">캐릭터 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
+								<li><a href="#"><img src="images/kakao_menu.png" width="120" alt="카카오프렌즈"></a></li>
+								<li><a href="#"><img src="images/niniz_logo.png" alt="니니즈"></a></li>
+							</ul>
+						</li>
+						<li><a href="#">매장안내 <img class="go" src="images/thin_right_arrow_333.png" alt="go" width="10px"></a></li>
+						<li><a href="#">고객센터 <div class="arrow"></div></a>
+							<ul class="mob_submenu">
 								<li><a href="category.html">공지사항</a></li>
 								<li><a href="#">QnA</a></li>
 								<li><a href="#">Contact me</a></li>
@@ -53,7 +101,7 @@
 						</li>
 					</ul>
 				</nav>
-			</div>	
+			</section>
 		</header>
 		
 		<!--콘텐츠영역-->
@@ -61,21 +109,35 @@
 			<!--상품이미지-->
 			<section id="item">
 				<div id="item_thumb">
-					<img src="images/items_1.jpg" alt="상품이미지"/>
+					<!--<img src="images/items_1.jpg" alt="상품이미지"/>
+					<img src="images/items_1_over.jpg">
+					<img src="images/items_2.jpg">
+					<img src="images/items_2_over.jpg">-->
+					<div id="item_thumb_top">
+						<img src="images/items_1.jpg" alt="item">
+						<img src="images/items_1_over.jpg" alt="item" style="display:none">
+						<img src="images/items_2.jpg" alt="item" style="display:none">
+						<img src="images/items_2_over.jpg" alt="item"  style="display:none">
+					</div>
 					<div id="item_thumb_bottom">
-						<img src="images/items_1.jpg">
-						<img src="images/items_1_over.jpg">
-						<img src="images/items_2.jpg">
-						<img src="images/items_2_over.jpg">
+						<img src="images/items_1.jpg" alt="item" class="activeImg">
+						<img src="images/items_1_over.jpg" alt="item">
+						<img src="images/items_2.jpg" alt="item">
+						<img src="images/items_2_over.jpg" alt="item">
+					</div>
+					<div class="mob_item_info">
+						<h2 class="item_name">2019 다이어리_라이언</h2>
+						<p class="static_item_price sale" style="margin-top:20px;" >상품 금액 : 18,000원</p>
+						<p class="sales_price" style="margin-top:10px">상품 금액 : 16,000원</p>
 					</div>
 				</div>
 				<!--상품상세정보-->
 				<div id="item_detail_form">
 					<nav id="navi">
 						<ul class="item_nav">
-							<li><a href="#item_detail">상세페이지</a></li>
-							<li><a href="#item_notice">구매유의사항</a></li>
-							<li><a href="#item_question">상품문의</a></li>
+							<li id="index1"><a href="#item_detail">상세페이지</a></li>
+							<li id="index2"><a href="#item_notice">구매유의사항</a></li>
+							<li id="index3"><a href="#item_question">상품후기</a></li>
 						</ul>
 					</nav>
 					<article id="item_detail">
@@ -87,81 +149,87 @@
 						<img src="images/product_item_1/item1_info6.jpg" alt="상세페이지1">
 						<img src="images/product_item_1/item1_info7.jpg" alt="상세페이지1">
 						<img src="images/product_item_1/item1_info8.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info9.jpg" alt="상세페이지1">
+						<!--<img src="images/product_item_1/item1_info9.jpg" alt="상세페이지1">
 						<img src="images/product_item_1/item1_info10.jpg" alt="상세페이지1">
 						<img src="images/product_item_1/item1_info11.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info12.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info13.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info14.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info15.jpg" alt="상세페이지1">
 						<img src="images/product_item_1/item1_info16.jpg" alt="상세페이지1">
 						<img src="images/product_item_1/item1_info17.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info18.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info19.jpg" alt="상세페이지1">
-						<img src="images/product_item_1/item1_info20.jpg" alt="상세페이지1">
+						<img src="images/product_item_1/item1_info18.jpg" alt="상세페이지1">-->
 					</article>
 					<article id="item_notice">
-						[ 국내 배송 ]
-
-						배송
-						· 배송사: CJ대한통운
-						· 배송비: 국내 2,500원 (3만 원 이상 구매 시 무료배송)
-						· 배송기간: 오후 3시 이전 주문 당일 출고 (영업일 기준)
-						  단, 상품의 재고 상황, 배송량, 배송 지역에 따라 배송기일이 추가로 소요될 수 있는 점 양해 부탁드립니다.
+						<h1 class="tab_title">유의사항</h1>
+						<div>
+							<h3>상품 정보 고시</h3>
+							<ul>
+								<li>품명 및 모델명 : 2019 다이어리_라이언</li>
+								<li>크기 : 33.3 * 18.2cm</li>
+								<li>재질 : 종이 외</li>
+								<li>제조국(원산지) : 한국</li>
+								<li>제조자/수입자 : 드림넥스트</li>
+							</ul>
+						</div> 
 						
-						취소/교환/반품
-						· 주문 취소 및 배송지 변경은 “주문접수” 단계에서만 가능합니다.
-						  마이페이지에서 취소 또는 변경하실 수 있습니다.
-						· 교환 및 반품은 배송완료 후 7일 이내만 가능합니다.
-						  단, 재화 등의 내용이 표시, 광고 내용과 다르거나 계약내용을 다르게 이행한 경우에는 재화 등을 공급받은 날로부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날로부터 30일 이내에 교환 및 반품이 가능합니다.
-						· 다음의 경우 교환 및 반품이 불가합니다.
-						  - 이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우
-						  - 포장이 훼손되어 상품가치가 상실된 경우 (예: 택과 라벨이 훼손된 경우 등)
-						  - 이용자의 사용 또는 일부 소비에 의해 재화 등의 가치가 현저히 감소한 경우
-						  - 복제가 가능한 재화 등의 포장을 훼손한 경우
-						  - 시간 경과에 의하여 재판매가 곤란할 정도로 상품의 가치가 현저히 감소한 경우
-						  - 고객의 주문에 따라 개별 생산되는 상품의 경우
-						· 상품의 불량/하자 및 표시광고 및 계약 내용이 다른 경우 해당 상품의 회수 비용은 무료이나, 고객님의 단순변심에 의한 교환/반품일 경우에는 교환/반품 배송비를 고객님께서 직접 부담하셔야 합니다.
+						<div style="margin-top:80px;">
+							<h2>[ 국내 배송 ]</h2>
+							<h3>배송</h3>
+							<ul>
+								<li>&#8226; 배송사: CJ대한통운</li>
+								<li>&#8226; 배송비: 국내 2,500원 (3만 원 이상 구매 시 무료배송)</li>
+								<li>&#8226; 배송기간: 오후 3시 이전 주문 당일 출고 (영업일 기준)<br /> 
+								 단, 상품의 재고 상황, 배송량, 배송 지역에 따라 배송기일이 추가로 소요될 수 있는 점 양해 부탁드립니다.</li>
+							</ul>
+							<h3>취소/교환/반품</h3>
+							<ul>
+								<li>&#8226; 주문 취소 및 배송지 변경은 “주문접수” 단계에서만 가능합니다.<br /> 마이페이지에서 취소 또는 변경하실 수 있습니다.</li>
+								<li>&#8226; 교환 및 반품은 배송완료 후 7일 이내만 가능합니다.<br />단, 재화 등의 내용이 표시, 광고 내용과 다르거나 계약내용을 다르게 이행한 경우에는 재화 등을 공급받은 날로부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날로부터 30일 이내에 교환 및 반품이 가능합니다.</li>
+								<li>&#8226; 다음의 경우 교환 및 반품이 불가합니다. 
+									<ul>
+										<li> - 이용자에게 책임 있는 사유로 재화 등이 멸실 또는 훼손된 경우</li>
+										<li> - 포장이 훼손되어 상품가치가 상실된 경우 (예: 택과 라벨이 훼손된 경우 등)</li>
+										<li> - 이용자의 사용 또는 일부 소비에 의해 재화 등의 가치가 현저히 감소한 경우</li>
+										<li> - 복제가 가능한 재화 등의 포장을 훼손한 경우</li>
+										<li> - 시간 경과에 의하여 재판매가 곤란할 정도로 상품의 가치가 현저히 감소한 경우</li>
+										<li> - 고객의 주문에 따라 개별 생산되는 상품의 경우</li>
+									</ul>
+								</li>
+								<li>&#8226; 상품의 불량/하자 및 표시광고 및 계약 내용이 다른 경우 해당 상품의 회수 비용은 무료이나, 고객님의 단순변심에 의한 교환/반품일 경우에는 교환/반품 배송비를 고객님께서 직접 부담하셔야 합니다.</li>
+							</ul>
+							<h3>환불</h3>
+							<p>&#8226;주문취소 및 반품 시 환불은 주문 시 이용하신 결제수단으로 2~7 영업일 이내 환불됩니다.</p>
+							<h3>기타 문의</h3>
+							<p>&#8226;기타 교환 및 반품에 대한 문의는 1:1 문의하기 또는 1577-0000으로 문의해주세요.</p>
+						</div>
+						<div style="margin-top:80px;">
+							<h2>[ 글로벌 배송 ]</h2>
+							<h3>배송</h3>
+							<ul>
+								<li>&#8226; 배송사: EMS</li>
+								<li>&#8226; 국가별 배송비는 글로벌 배송 안내 페이지를 참고해주세요. (홈페이지 하단 글로벌배송)</li>
+								<li>&#8226; 배송기간: 주문일로부터 1~3일 이내 출고<br /> 
+								 단, 상품의 재고 상황, 배송량에 따라 배송기일이 추가적으로 소요될 수 있는 점 양해 부탁드립니다.</li>
+							</ul>
+							<h3>취소/교환/반품</h3>
+							<ul>
+								<li>&#8226; 주문 취소 및 배송지 변경은 “주문접수” 단계에서만 가능합니다.<br /> 마이페이지에서 취소 또는 변경하실 수 있습니다.</li>
+								<li>&#8226; 글로벌 배송 구매 시, 단순 변심에 의한 교환 및 반품이 불가합니다.</li>
+							</ul>
+							<h3>통관/관세</h3>
+							<p>&#8226;국가 세관 규정에 따르면, 배송 과정에서 나라별로 관세가 발생할 수 있으며 관세는 고객 부담입니다.
+							<br />상세 문의사항은 가까운 우체국이나 세관 또는 거주하시는 국가의 우체국에 문의바랍니다.</p>
+							<p>&#8226;배송 국가별 금지 및 제한 품목을 주문 전 확인 바랍니다. </p>
+							<h3>기타 문의</h3>
+							<p>&#8226;기타 문의사항은 1:1 문의 또는 mhsuk0422@gmail.com 으로 문의해주세요.</p>
+						</div>
 						
-						환불
-						· 주문취소 및 반품 시 환불은 주문 시 이용하신 결제수단으로 2~7 영업일 이내 환불됩니다. 
 						
-						기타 문의
-						· 기타 교환 및 반품에 대한 문의는 1:1 문의하기 또는 1577-6263으로 문의해주세요.
-						
-						 
-						
-						[ 글로벌 배송 ]
-						
-						배송
-						· 배송사: EMS
-						· 배송비: EMS 요금 적용
-						· 국가별 배송비는 글로벌 배송 안내 페이지를 참고해주세요. (홈페이지 하단 글로벌배송)
-						· 배송기간: 주문일로부터 1~3일 이내 출고
-						  단, 상품의 재고 상황, 배송량에 따라 배송기일이 추가적으로 소요될 수 있는 점 양해 부탁드립니다.
-						
-						취소/교환/반품
-						· 주문 취소 및 배송지 변경은 “주문접수” 단계에서만 가능합니다.
-						  마이페이지에서 취소 또는 변경하실 수 있습니다.
-						· 글로벌 배송 구매 시, 단순 변심에 의한 교환 및 반품이 불가합니다.
-						
-						통관/관세
-						· 국가 세관 규정에 따르면, 배송 과정에서 나라별로 관세가 발생할 수 있으며 관세는 고객 부담입니다. 
-						  상세 문의사항은 가까운 우체국이나 세관 또는 거주하시는 국가의 우체국에 문의바랍니다.
-						· 배송 국가별 금지 및 제한 품목을 주문 전 확인 바랍니다.
-						
-						기타 문의
-						· 기타 문의사항은 1:1 문의 또는 mhsuk0422@gmail.com 으로 문의해주세요.
 						
 					</article>
 					<article id="item_question">
-						<img src="images/product_item_1/item1_info1.jpg">
-						<img src="images/product_item_1/item1_info2.jpg">
-						<img src="images/product_item_1/item1_info3.jpg">
-						<img src="images/product_item_1/item1_info4.jpg">
-						<img src="images/product_item_1/item1_info5.jpg">
-						<img src="images/product_item_1/item1_info6.jpg">
-						<img src="images/product_item_1/item1_info7.jpg">
+						<h1 class="tab_title">상품후기</h1>
+						<div class="review_box">
+							등록된 정보가 없습니다.
+						</div>
+						<span class="review_submit">작성하기</span>
 					</article>	
 				</div>
 			</section>
@@ -169,69 +237,75 @@
 			<!--상품주문-->
 			<section id="item_shipping">
 				<div id="shipping">
-					<div id="item_info">
-						<h2 id="item_name">2019 다이어리_라이언</h2>
+					<div class="item_info">
+						<h2 class="item_name">2019 다이어리_라이언</h2>
 						<p id="item_price" style="display:none">16000</p>
-						<p id="static_item_price" class="sale">18,000원</p>
-						<p id="sales_price">16,000원</p>
+						<p class="static_item_price sale" style="margin-top:20px;" >상품 금액 : 18,000원</p>
+						<p class="sales_price" style="margin-top:10px">상품 금액 : 16,000원</p>
 					</div>
 					<div id="item_order">
-						<div id="order_box">
-							<button id="btn_minus"><img src="images/minus.png" width="100%"></button>
-							<input type="text" maxlength="3" value="1" id="order_numder" onClick="totalNum()">
-							<button id="btn_plus"><img src="images/plus.png" width="100%"></button>
+						<div class="order_box">
+							<button class="btn_minus"><img src="images/minus.png" width="100%"  alt="-"></button>
+							<input type="text" maxlength="3" value="1" class="order_numder" onClick="totalNum()">
+							<button class="btn_plus"><img src="images/plus.png" width="100%"  alt="+"></button>
 						</div>
-						
+						<p style="color:#B4B4B4;font-size:0.8em"> &#8251; 1인당 최대 구매량은 100개 입니다.</p>
 						<p class="total">총 상품금액&nbsp;&nbsp;<span class="total_price">16,000</span>원</p>
-						<button id="btn_bag">장바구니</button>
-						<button id="btn_order">구매하기</button>
+						<button class="btn_bag">장바구니</button>
+						<button class="btn_order">구매하기</button>
+					</div>
 				</div>
+				<div id="mob_shipping">
+					<div id="mob_item_order">
+						<p class="total">&#36; &nbsp;<span class="total_price">16,000</span>원</p>
+						<div class="order_box">
+							<button class="btn_minus"><img src="images/minus.png" width="100%" alt="-"></button>
+							<input type="text" maxlength="3" value="1" class="order_numder" onClick="totalNum()">
+							<button class="btn_plus"><img src="images/plus.png" width="100%" alt="+"></button>
+						</div>
+						<button class="btn_order">구매하기</button>
+						<div class="clear"></div>
+					</div>
 				</div>
-				
 			</section>
 			<div class="clear"></div>
 			<section id="sub_content">
-						<img src="images/snow_world_1.jpg">
-						<img src="images/snow_world_2.jpg">
-						<img src="images/snow_world_3.jpg">
-						<img src="images/snow_world_4.jpg">
-						
-						<img src="images/product_item_1/item1_info8.jpg">
-						<img src="images/product_item_1/item1_info9.jpg">
-						<img src="images/product_item_1/item1_info10.jpg">
-						<img src="images/product_item_1/item1_info11.jpg">
-						<img src="images/product_item_1/item1_info12.jpg">
-						<img src="images/product_item_1/item1_info13.jpg">
-						<img src="images/product_item_1/item1_info14.jpg">
-						<img src="images/product_item_1/item1_info15.jpg">
-						<img src="images/product_item_1/item1_info16.jpg">
-						<img src="images/product_item_1/item1_info17.jpg">
-						<img src="images/product_item_1/item1_info18.jpg">
-						<img src="images/product_item_1/item1_info19.jpg">
-						<img src="images/product_item_1/item1_info20.jpg">
+				<section id="niniz_kakao">
+				<div class="center">
+					<div id="niniz"><a class="btn_friends" href="#">지금 만나러 가기</a></div>
+					<div id="kakao"><a class="btn_friends" href="#">지금 만나러 가기</a></div>
+				</div>
+		`		</section>	
 			</section>
+			
+			
+			<div class="clear"></div>
 		</div>
 		
 		<!--푸터영역-->
 		<footer id="footer">
 			<div class="wrap">
-				<div id="footer_logo"><img src="images/footer_logo.png"/></div>	
+				<div id="footer_logo"><img src="images/footer_logo.png" alt="logo"/></div>	
 				<ul id="footer_nav">
 					<li><a href="#">개인정보처리방치</a></li>
 					<li><a href="#">이용약관</a></li>
 				</ul>
 				<div id="footer_sns">
-					<a href="#"><img src="images/facebook.png" /></a>
-					<a href="#"><img src="images/twitter.png" /></a>
-					<a href="#"><img src="images/instagram.png" /></a>
-					<a href="#"><img src="images/youtube.png" /></a>
+					<a href="#"><img src="images/facebook.png" alt="facebook 페이스북"/></a>
+					<a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+					<a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+					<a href="#"><img src="images/youtube.png" alt="youtube"/></a>
 				</div>
-				<p class="footer_info">대표이사: 문채은</p>
-				<p class="footer_info">주소: 경기도 시흥시 신천동 </p>
-				<p class="footer_info">대표전화: 010-0000-0000</p>
-				<p class="footer_info">이메일: mhsuk0422@gmail.com</p>
-				<p class="footer_info">Copyright ⓒ moonChaeEun </p>
-				
+				<div class="clear"></div>
+				<p class="footer_info">주소: 서울특별시 강남구 테헤란로 521 파르나스타워, 27층 </p>
+				<p class="footer_info">대표전화: 1577-6263 / 평일 10시 ~ 18시</p>
+				<p class="footer_info">Copyright | '포트폴리오용으로 제작한 사이트입니다.'</p>
+				<div id="mob_footer_sns">
+					<a href="#"><img src="images/facebook.png" alt="facebook 페이스북"/></a>
+					<a href="#"><img src="images/twitter.png" alt="twitter"/></a>
+					<a href="#"><img src="images/instagram.png" alt="instagram"/></a>
+					<a href="#"><img src="images/youtube.png" alt="youtube"/></a>
+				</div>
 			</div>
 		</footer>
 		<!--top버튼-->
@@ -239,123 +313,32 @@
 	</div>
 	
 	<script src="js/jquery-2.2.4.min.js"></script>	
-	<script src="js/nav_bar_scroll_product.js"></script><!--헤더스크롤효과-->	
+	<script src="js/ScrollMagic.min.js"></script>
+	<script src="js/debug.addIndicators.min.js"></script>
+	
 	<script src="js/scroll_top_btn.js"></script><!--스크롤탑-->
+	
 	<script>
-		$(function() { /*  */
-			if ($('#shipping').length) { // make sure "#sticky" element exists
-				var el = $('#shipping');
-				var shippingTop = $('#shipping').offset().top; // returns number
-				var shippingHeight = $('#shipping').height();
-				
+		// init controller
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {duration:  $('#item_detail').height()}});
+	var controller2 = new ScrollMagic.Controller({globalSceneOptions: {duration: $('#item_notice').height()}});
+	var controller3 = new ScrollMagic.Controller({globalSceneOptions: {duration:  $('#item_question').height()}});
 
-			$(window).scroll(function() { // scroll event
-				var limit = $('#sub_content').offset().top - shippingHeight -370.4 ;
-				//var limit = $('#sub_content').offset().top - shippingHeight - 20;
-
-				var windowTop = $(window).scrollTop(); // returns number
-
-				if (shippingTop < windowTop) {
-					el.css({
-						position: 'fixed',
-						top: 22,
-						width:756
-					});
-					
-					} else {
-					el.css('position', 'static');
-					}
-
-				if (limit < windowTop) {
-					var diff = limit - windowTop;
-					el.css({
-						top: diff
-					});
-					}
-				
-
-				});
-			}
-			
-			if ($('#navi').length) { // make sure "#sticky" element exists
-				var el2 = $('#navi');
-				var header = $('#navbar');
-				var naviTop = $('#navi').offset().top; // returns number
-				var naviHeight = $('#navi').height();
-				
-
-			$(window).scroll(function() { // scroll event
-				var limit2 = $('#sub_content').offset().top - naviHeight - 500;
-				//var limit2 = $('#footer').offset().top - naviHeight - 1000;
-
-				var windowTop = $(window).scrollTop(); // returns number
-
-				if (naviTop < windowTop) {
-					el2.css({
-						position: 'fixed',
-						top: 0,
-						width:756
-					});
-					} else {
-						el2.css('position', 'static');
-					}
-
-				if (limit2 < windowTop) {
-					var diff2 = limit2 - windowTop;
-					el2.css({
-						top: diff2
-					});
-					}
-				
-
-				});
-			}
-		});
-</script>
-
-	<script> /*수량, 가격 계산*/
-		$(function(){
-			function totalNum(){
-					var order = $("#order_numder").val();
-					var price = $("#item_price").text();
-					var num_price = parseInt(price,10);
-					var num_order = parseInt(order,10);
-					var total= num_order*num_price;
-					var showTotal = total.toLocaleString();//숫자 세자리단위 	
-					$(".total_price").text(showTotal);
-					
-					}
-			
-			var min = 0;
-			var max = 100;
-			
-			$('#btn_minus').click(function(e){
-				e.preventDefault();
-				var stat = $('#order_numder').val();
-				var num = parseInt(stat,10);
-				num--;
-				if(num<=min){
-					alert('1개는 최소 수량입니다.');
-					num =1;
-				}
-				$('#order_numder').val(num);
-				totalNum();
-				
-			});
-			$('#btn_plus').click(function(e){
-				e.preventDefault();
-				var stat = $('#order_numder').val();
-				var num = parseInt(stat,10);
-				num++;
-
-				if(num>max){
-					alert('아이디당 '+max+'개로 주문 제한되어 있습니다.');
-					num = max;
-				}
-				$('#order_numder').val(num);
-				totalNum();
-			});
-		});
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#item_detail"})
+					.setClassToggle("#index1", "index") // add class toggle
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#item_notice"})
+					.setClassToggle("#index2", "index") // add class toggle
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller2);
+	new ScrollMagic.Scene({triggerElement: "#item_question"})
+					.setClassToggle("#index3", "index") // add class toggle
+					//.addIndicators() // add indicators (requires plugin)
+					.addTo(controller3);
 	</script>
+	<script src="js/nav_bar_scroll_product.js"></script><!--헤더스크롤효과-->	
+
 </body>
 </html>
